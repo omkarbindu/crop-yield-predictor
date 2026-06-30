@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const connectDB = require('./config/db');
+const { corsOptions, allowedOrigins } = require('./config/cors');
 const authRoutes = require('./routes/auth');
 const farmerRoutes = require('./routes/farmer');
 const weatherRoutes = require('./routes/weather');
@@ -20,16 +21,29 @@ const alertsRoutes = require('./routes/alerts');
 const fmsRoutes = require('./routes/fms');
 
 async function start() {
+  const app = express();
+
+  // CORS must be registered before routes so preflight OPTIONS receives headers.
+  app.use(cors(corsOptions));
+  app.use(express.json());
+
+  app.get('/health', (req, res) => {
+    res.json({
+      ok: true,
+      mongo: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
+    });
+  });
+
   const connected = await connectDB();
   if (!connected) {
-    process.exit(1);
+    console.error('MongoDB connection failed — auth and data routes will not work.');
+    if (process.env.NODE_ENV !== 'production') {
+      process.exit(1);
+    }
   }
 
+  console.log('CORS allowed origins:', [...allowedOrigins].join(', '));
   console.log('PYTHON_YIELD_URL =', process.env.PYTHON_YIELD_URL);
-
-  const app = express();
-  app.use(cors({ origin: true, credentials: true }));
-  app.use(express.json());
 
   app.use('/api/auth', authRoutes);
   app.use('/api/farmer', farmerRoutes);
@@ -46,13 +60,6 @@ async function start() {
   app.use('/api/shetimitra', shetimitraRoutes);
   app.use('/api/alerts', alertsRoutes);
   app.use('/api/fms', fmsRoutes);
-
-  app.get('/health', (req, res) => {
-    res.json({
-      ok: true,
-      mongo: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected'
-    });
-  });
 
   const PORT = process.env.PORT || 8000;
   const server = app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

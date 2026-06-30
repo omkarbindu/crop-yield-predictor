@@ -43,3 +43,5 @@ services:
         sync: false
       - key: PYTHON_DISEASE_URL
         sync: false
+      - key: FRONTEND_URL
+        value: https://sweet-jalebi-4fe432.netlify.app
