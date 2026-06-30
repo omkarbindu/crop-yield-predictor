@@ -1,0 +1,40 @@
+.map-picker {
+  width: 100%;
+}
+
+.map-picker .map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--glass-border);
+}
+
+.map-picker-actions {
+  margin-top: 12px;
+}
+
+.map-picker-hint,
+.map-picker-error {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.map-picker-error {
+  color: var(--error);
+}
+
+.map-picker-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--map-placeholder-bg);
+  border-radius: 16px;
+  border: 2px dashed var(--glass-border);
+  color: var(--text-secondary);
+  padding: 16px;
+  text-align: center;
+}
+
+.map-picker-placeholder code {
+  color: var(--farm-green);
+}

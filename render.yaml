@@ -1,0 +1,45 @@
+# Crop Yield Predictor — Render Blueprint
+# Dashboard: New → Blueprint → connect this repo
+
+services:
+  - type: web
+    name: crop-yield-ml
+    runtime: docker
+    rootDir: crop-yield-prediction-main (1)/crop-yield-prediction-main
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_NAME
+        value: Crop Yield ML
+      - key: APP_DOCS_USERNAME
+        value: admin
+      - key: APP_DOCS_PASSWORD
+        generateValue: true
+      - key: DEBUG
+        value: "false"
+
+  - type: web
+    name: crop-yield-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: WEATHER_API_KEY
+        sync: false
+      # Set after crop-yield-ml deploys (replace with your Render ML URL):
+      - key: PYTHON_YIELD_URL
+        sync: false
+      - key: PYTHON_DISEASE_URL
+        sync: false

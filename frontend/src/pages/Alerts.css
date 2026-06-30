@@ -1,0 +1,80 @@
+.alerts-page .alerts-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.alerts-hint {
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.alerts-hint a {
+  color: var(--farm-green);
+  font-weight: 600;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alert-card {
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-align: left;
+}
+
+.alert-card.unread {
+  border-left: 4px solid var(--farm-green);
+}
+
+.alert-card.read {
+  opacity: 0.85;
+}
+
+.alert-card:hover {
+  transform: translateY(-2px);
+}
+
+.alert-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.alert-type {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--farm-green);
+}
+
+.alert-unread-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--farm-gold);
+}
+
+.alert-card h3 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.alert-card p {
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.alert-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+}

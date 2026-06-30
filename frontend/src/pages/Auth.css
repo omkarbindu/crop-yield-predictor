@@ -1,0 +1,96 @@
+.auth-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+}
+
+.auth-card-wide {
+  max-width: 520px;
+}
+
+.auth-card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.auth-tagline {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.auth-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: var(--farm-green);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form .input-field {
+  width: 100%;
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.auth-error {
+  color: var(--error);
+  font-size: 0.9rem;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.auth-switch a {
+  color: var(--farm-green);
+  font-weight: 600;
+}
+
+.auth-label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.auth-hint {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.auth-gis {
+  margin-top: 8px;
+}
+
+.auth-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.auth-check input {
+  width: 18px;
+  height: 18px;
+}

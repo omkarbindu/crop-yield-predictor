@@ -1,0 +1,135 @@
+.predictor-page {
+  padding-bottom: 48px;
+}
+
+.predictor-header {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.predictor-header h1 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.predictor-header p,
+.predictor-hint {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.predictor-hint {
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+.predictor-card {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.predictor-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: var(--farm-green);
+}
+
+.predictor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+}
+
+.predictor-form label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.predictor-error {
+  color: var(--error);
+  font-size: 0.9rem;
+}
+
+.predictor-result-json {
+  background: var(--code-bg);
+  padding: 16px;
+  border-radius: 12px;
+  overflow: auto;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  color: var(--text-primary);
+}
+
+.explanation-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.explanation-block h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--farm-green);
+}
+
+.explanation-text {
+  line-height: 1.7;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+}
+
+.input-file {
+  padding: 8px;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text-primary);
+}
+
+.disease-preview {
+  margin: 12px 0;
+}
+
+.disease-preview img {
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 12px;
+  border: 2px solid var(--glass-border);
+}
+
+.treatment-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.treatment-list li {
+  padding: 14px 16px;
+  background: var(--surface-2);
+  border-radius: 12px;
+  border-left: 4px solid var(--farm-green);
+}
+
+.treatment-list strong {
+  color: var(--farm-green);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.treatment-list p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.treatment-warn {
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--warning-bg);
+  color: var(--warning);
+  border-radius: 10px;
+  font-size: 0.9rem;
+}

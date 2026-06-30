@@ -1,0 +1,68 @@
+.profile-page {
+  padding-bottom: 48px;
+}
+
+.profile-header {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.profile-header h1 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.profile-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.profile-card {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.profile-card h2 {
+  font-size: 1.25rem;
+  color: var(--farm-green);
+  margin-bottom: 16px;
+}
+
+.profile-gis-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.profile-dl {
+  display: grid;
+  grid-template-columns: minmax(140px, auto) 1fr;
+  gap: 8px 24px;
+  margin-bottom: 20px;
+}
+
+.profile-dl dt {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.profile-dl dd {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.profile-map {
+  margin-top: 16px;
+}
+
+.profile-empty {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 500px) {
+  .profile-dl {
+    grid-template-columns: 1fr;
+  }
+}

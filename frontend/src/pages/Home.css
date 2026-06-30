@@ -1,0 +1,88 @@
+.home-page {
+  padding-bottom: 48px;
+}
+
+.home-header {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.home-header h1 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.home-welcome {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.home-map-section {
+  padding: 24px;
+}
+
+.home-map-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.home-map-header h2 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.home-map-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.home-satellite {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.home-satellite input {
+  width: 18px;
+  height: 18px;
+}
+
+.home-map-display {
+  position: relative;
+}
+
+.home-no-location {
+  margin-top: 16px;
+  color: var(--text-secondary);
+}
+
+.home-no-location .btn-primary {
+  margin-left: 8px;
+}
+
+.home-msg {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.home-msg.success {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.home-msg.error {
+  background: var(--error-bg);
+  color: var(--error);
+}
