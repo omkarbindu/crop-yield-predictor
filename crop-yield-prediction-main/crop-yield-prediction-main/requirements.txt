@@ -11,3 +11,4 @@ pydantic_settings==2.12.0
 starlette==0.50.0
 ultralytics==8.4.7
 uvicorn==0.40.0
+python-multipart==0.0.20
