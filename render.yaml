@@ -5,7 +5,7 @@ services:
   - type: web
     name: crop-yield-ml
     runtime: docker
-    rootDir: crop-yield-prediction-main (1)/crop-yield-prediction-main
+    rootDir: crop-yield-prediction-main/crop-yield-prediction-main
     dockerfilePath: ./Dockerfile
     plan: free
     healthCheckPath: /health
