@@ -25,6 +25,7 @@ async function start() {
 
   // CORS must be registered before routes so preflight OPTIONS receives headers.
   app.use(cors(corsOptions));
+  app.options('*', cors(corsOptions));  
   app.use(express.json());
 
   app.get('/health', (req, res) => {
